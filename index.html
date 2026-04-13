@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuriste & Épuré</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --beige: #dcd7c9; /* Beige élégant */
+            --accent: #a39171; /* Beige plus foncé pour les détails */
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--black);
+            color: var(--beige);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Effet de grain futuriste en arrière-plan (optionnel) */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+        }
+
+        header {
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(220, 215, 201, 0.1);
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin: 0;
+            line-height: 0.9;
+        }
+
+        .hero p {
+            max-width: 500px;
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            color: var(--accent);
+            letter-spacing: 1px;
+        }
+
+        .cta-container {
+            margin-top: 50px;
+        }
+
+        .btn-futur {
+            color: var(--black);
+            background-color: var(--beige);
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            border: 1px solid var(--beige);
+            transition: all 0.4s ease;
+        }
+
+        .btn-futur:hover {
+            background-color: transparent;
+            color: var(--beige);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.5;
+        }
+
+        /* Section Contenu */
+        .content-section {
+            padding: 100px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(220, 215, 201, 0.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            border: 1px solid rgba(220, 215, 201, 0.1);
+            padding: 30px;
+            transition: border 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--beige);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Nexus // 01</div>
+        <div style="font-size: 1.5rem;">⠿</div>
+    </header>
+
+    <section class="hero">
+        <h1>Future<br>Standard</h1>
+        <p>L'excellence technologique rencontrant le design intemporel.</p>
+        
+        <div class="cta-container">
+            <a href="#" class="btn-futur">Explorer le projet</a>
+        </div>
+
+        <div class="scroll-indicator">Scroll down</div>
+    </section>
+
+    <section class="content-section">
+        <div class="grid">
+            <div class="card">
+                <h3>Innovation</h3>
+                <p>Dépasser les limites de l'interface utilisateur conventionnelle.</p>
+            </div>
+            <div class="card">
+                <h3>Vision</h3>
+                <p>Une esthétique minimale pour une clarté maximale.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
