@@ -3,174 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuriste & Épuré</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    <title>Renaissance | Santé & Bien-être</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --black: #0a0a0a;
-            --beige: #dcd7c9; /* Beige élégant */
-            --accent: #a39171; /* Beige plus foncé pour les détails */
+            --black: #0f0f0f;
+            --beige: #f5f2eb;
+            --gold: #c5a059;
+            --white: #ffffff;
         }
 
         body {
-            margin: 0;
-            background-color: var(--black);
-            color: var(--beige);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            margin: 0; background-color: var(--beige); color: var(--black);
+            font-family: 'Inter', sans-serif; line-height: 1.8;
         }
 
-        /* Effet de grain futuriste en arrière-plan (optionnel) */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0.03;
-            pointer-events: none;
-            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-        }
-
+        /* Header Minimaliste */
         header {
-            padding: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(220, 215, 201, 0.1);
+            padding: 20px 5%; display: flex; justify-content: space-between;
+            align-items: center; background: var(--white);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
 
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-        }
-
+        /* Hero Section Emotionnelle */
         .hero {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
+            padding: 80px 5%; text-align: center; background: var(--black); color: var(--beige);
         }
-
         .hero h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: -2px;
-            margin: 0;
-            line-height: 0.9;
+            font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 4rem);
+            margin-bottom: 20px; line-height: 1.2;
         }
+        .hero p { max-width: 700px; margin: 0 auto 30px; font-style: italic; opacity: 0.9; }
 
-        .hero p {
-            max-width: 500px;
-            font-weight: 300;
-            font-size: 1.1rem;
-            margin-top: 30px;
-            color: var(--accent);
-            letter-spacing: 1px;
+        /* Section La Cure (Argumentaire) */
+        .cure-section { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
+        .badge { 
+            background: var(--gold); color: white; padding: 5px 15px; 
+            border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;
         }
+        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-top: 10px; }
 
-        .cta-container {
-            margin-top: 50px;
+        /* Les Bienfaits - Grid */
+        .grid-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .benefit-card { background: white; padding: 30px; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .benefit-card h3 { color: var(--gold); margin-top: 0; }
+
+        /* CTA (Call to Action) */
+        .cta-box {
+            background: var(--black); color: var(--beige); padding: 50px;
+            text-align: center; border-radius: 10px; margin-top: 60px;
         }
-
-        .btn-futur {
-            color: var(--black);
-            background-color: var(--beige);
-            padding: 18px 45px;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            border: 1px solid var(--beige);
-            transition: all 0.4s ease;
+        .btn-affiliate {
+            background: var(--gold); color: white; padding: 18px 40px;
+            text-decoration: none; display: inline-block; font-weight: bold;
+            border-radius: 5px; transition: transform 0.3s; margin-top: 20px;
         }
+        .btn-affiliate:hover { transform: scale(1.05); }
 
-        .btn-futur:hover {
-            background-color: transparent;
-            color: var(--beige);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            opacity: 0.5;
-        }
-
-        /* Section Contenu */
-        .content-section {
-            padding: 100px 30px;
-            max-width: 900px;
-            margin: 0 auto;
-            border-top: 1px solid rgba(220, 215, 201, 0.1);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 768px) {
-            .grid { grid-template-columns: 1fr; }
-        }
-
-        .card {
-            border: 1px solid rgba(220, 215, 201, 0.1);
-            padding: 30px;
-            transition: border 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--beige);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            font-family: 'Space Grotesk', sans-serif;
-            text-transform: uppercase;
-        }
-
+        /* Label Laboratoire */
+        .lab-check { font-size: 0.9rem; color: #4a7c59; font-weight: bold; margin-top: 15px; display: block; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Nexus // 01</div>
-        <div style="font-size: 1.5rem;">⠿</div>
+        <div class="logo">RENAISSANCE</div>
+        <nav>Blog • Ma Cure • Boutique</nav>
     </header>
 
     <section class="hero">
-        <h1>Future<br>Standard</h1>
-        <p>L'excellence technologique rencontrant le design intemporel.</p>
-        
-        <div class="cta-container">
-            <a href="#" class="btn-futur">Explorer le projet</a>
-        </div>
-
-        <div class="scroll-indicator">Scroll down</div>
+        <h1>Retrouvez la joie d'un corps en pleine vitalité.</h1>
+        <p>"Le jour où j'ai enfin ressenti cette légèreté matinale, j'ai su que ma vie venait de changer. Ce n'est pas juste une cure, c'est un retour à soi."</p>
+        <span class="badge">Certifié par Laboratoire Européen</span>
     </section>
 
-    <section class="content-section">
-        <div class="grid">
-            <div class="card">
-                <h3>Innovation</h3>
-                <p>Dépasser les limites de l'interface utilisateur conventionnelle.</p>
+    <section class="cure-section">
+        <h2>Le protocole de 90 jours</h2>
+        <p>Parce que votre corps mérite une transformation profonde et non un remède éphémère. Notre cure de 3 mois agit au cœur de vos cellules pour des résultats qui durent.</p>
+
+        <div class="grid-benefits">
+            <div class="benefit-card">
+                <h3>Mois 1 : Détoxification</h3>
+                <p>Le corps se libère. Les tensions s'apaisent. Vous commencez à retrouver un sommeil réparateur et une peau plus nette.</p>
             </div>
-            <div class="card">
-                <h3>Vision</h3>
-                <p>Une esthétique minimale pour une clarté maximale.</p>
+            <div class="benefit-card">
+                <h3>Mois 2 : Régénération</h3>
+                <p>L'énergie revient. Vos fonctions vitales s'équilibrent grâce aux nutriments de haute pureté scientifique.</p>
             </div>
+            <div class="benefit-card">
+                <h3>Mois 3 : Consolidation</h3>
+                <p>La joie s'installe. Votre système est renforcé, votre immunité est au sommet. Vous rayonnez de santé.</p>
+            </div>
+        </div>
+
+        <div class="cta-box">
+            <h2>Prêt(e) pour votre renaissance ?</h2>
+            <p>Disponible en <strong>Gélules, Poudre fine ou Ampoules</strong> pour s'adapter à votre rythme de vie.</p>
+            <span class="lab-check">✓ Efficacité prouvée en laboratoire de pointe</span>
+            <a href="TON_LIEN_AFFILIE_ICI" class="btn-affiliate">Découvrir la Cure sur le site officiel</a>
         </div>
     </section>
 
