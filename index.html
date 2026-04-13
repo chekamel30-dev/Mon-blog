@@ -3,107 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renaissance | Santé & Bien-être</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Renaissance | Vitalité Cellulaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --black: #0f0f0f;
-            --beige: #f5f2eb;
-            --gold: #c5a059;
-            --white: #ffffff;
-        }
-
-        body {
-            margin: 0; background-color: var(--beige); color: var(--black);
-            font-family: 'Inter', sans-serif; line-height: 1.8;
-        }
-
-        /* Header Minimaliste */
-        header {
-            padding: 20px 5%; display: flex; justify-content: space-between;
-            align-items: center; background: var(--white);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; }
-
-        /* Hero Section Emotionnelle */
-        .hero {
-            padding: 80px 5%; text-align: center; background: var(--black); color: var(--beige);
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 4rem);
-            margin-bottom: 20px; line-height: 1.2;
-        }
-        .hero p { max-width: 700px; margin: 0 auto 30px; font-style: italic; opacity: 0.9; }
-
-        /* Section La Cure (Argumentaire) */
-        .cure-section { padding: 80px 5%; max-width: 1000px; margin: 0 auto; }
-        .badge { 
-            background: var(--gold); color: white; padding: 5px 15px; 
-            border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;
-        }
-        h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-top: 10px; }
-
-        /* Les Bienfaits - Grid */
-        .grid-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .benefit-card { background: white; padding: 30px; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-        .benefit-card h3 { color: var(--gold); margin-top: 0; }
-
-        /* CTA (Call to Action) */
-        .cta-box {
-            background: var(--black); color: var(--beige); padding: 50px;
-            text-align: center; border-radius: 10px; margin-top: 60px;
-        }
-        .btn-affiliate {
-            background: var(--gold); color: white; padding: 18px 40px;
-            text-decoration: none; display: inline-block; font-weight: bold;
-            border-radius: 5px; transition: transform 0.3s; margin-top: 20px;
-        }
-        .btn-affiliate:hover { transform: scale(1.05); }
-
-        /* Label Laboratoire */
-        .lab-check { font-size: 0.9rem; color: #4a7c59; font-weight: bold; margin-top: 15px; display: block; }
+        :root { --black: #0f0f0f; --beige: #f5f2eb; --gold: #c5a059; }
+        body { margin: 0; background-color: var(--beige); color: var(--black); font-family: 'Inter', sans-serif; line-height: 1.8; }
+        header { padding: 20px 5%; text-align: center; background: #fff; border-bottom: 1px solid #eee; }
+        .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; letter-spacing: 2px; }
+        .hero { padding: 100px 5%; text-align: center; background: var(--black); color: var(--beige); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
+        .hero p { max-width: 600px; margin: 0 auto; font-style: italic; opacity: 0.8; }
+        .content { padding: 80px 5%; max-width: 900px; margin: 0 auto; }
+        .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 40px 0; }
+        .step { background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eaeaea; }
+        .step h3 { color: var(--gold); margin-top: 0; }
+        .cta-section { background: #fff; padding: 60px; text-align: center; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .btn { background: var(--black); color: var(--beige); padding: 20px 40px; text-decoration: none; display: inline-block; font-weight: bold; border-radius: 5px; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background: var(--gold); }
+        .lab-badge { color: #4a7c59; font-weight: bold; font-size: 0.9rem; display: block; margin-bottom: 10px; }
     </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo">RENAISSANCE</div>
-        <nav>Blog • Ma Cure • Boutique</nav>
-    </header>
-
+    <header><div class="logo">RENAISSANCE</div></header>
     <section class="hero">
-        <h1>Retrouvez la joie d'un corps en pleine vitalité.</h1>
-        <p>"Le jour où j'ai enfin ressenti cette légèreté matinale, j'ai su que ma vie venait de changer. Ce n'est pas juste une cure, c'est un retour à soi."</p>
-        <span class="badge">Certifié par Laboratoire Européen</span>
+        <h1>Retrouvez l'énergie de vos 20 ans.</h1>
+        <p>"Une renaissance physique et mentale en 90 jours, prouvée par la science."</p>
     </section>
-
-    <section class="cure-section">
-        <h2>Le protocole de 90 jours</h2>
-        <p>Parce que votre corps mérite une transformation profonde et non un remède éphémère. Notre cure de 3 mois agit au cœur de vos cellules pour des résultats qui durent.</p>
-
-        <div class="grid-benefits">
-            <div class="benefit-card">
-                <h3>Mois 1 : Détoxification</h3>
-                <p>Le corps se libère. Les tensions s'apaisent. Vous commencez à retrouver un sommeil réparateur et une peau plus nette.</p>
-            </div>
-            <div class="benefit-card">
-                <h3>Mois 2 : Régénération</h3>
-                <p>L'énergie revient. Vos fonctions vitales s'équilibrent grâce aux nutriments de haute pureté scientifique.</p>
-            </div>
-            <div class="benefit-card">
-                <h3>Mois 3 : Consolidation</h3>
-                <p>La joie s'installe. Votre système est renforcé, votre immunité est au sommet. Vous rayonnez de santé.</p>
-            </div>
+    <section class="content">
+        <h2>Le protocole de 3 mois</h2>
+        <p>Notre cure exclusive, certifiée par laboratoire, a été conçue pour ceux qui ne veulent plus simplement "survivre", mais rayonner.</p>
+        <div class="step-grid">
+            <div class="step"><h3>Mois 1</h3><p>Purification profonde du système et réactivation du métabolisme.</p></div>
+            <div class="step"><h3>Mois 2</h3><p>Régénération cellulaire. L'énergie devient stable et constante.</p></div>
+            <div class="step"><h3>Mois 3</h3><p>Optimisation et protection durable de votre nouveau capital santé.</p></div>
         </div>
-
-        <div class="cta-box">
-            <h2>Prêt(e) pour votre renaissance ?</h2>
-            <p>Disponible en <strong>Gélules, Poudre fine ou Ampoules</strong> pour s'adapter à votre rythme de vie.</p>
-            <span class="lab-check">✓ Efficacité prouvée en laboratoire de pointe</span>
-            <a href="TON_LIEN_AFFILIE_ICI" class="btn-affiliate">Découvrir la Cure sur le site officiel</a>
+        <div class="cta-section">
+            <span class="lab-badge">✓ PRODUIT CERTIFIÉ EN LABORATOIRE</span>
+            <h2>Prêt à changer de vie ?</h2>
+            <p>Disponible en Gélules, Poudre ou Ampoules.</p>
+            <a href="https://votre-lien-affilie.com" class="btn">VOIR LA CURE OFFICIELLE</a>
         </div>
     </section>
-
 </body>
 </html>
